@@ -13,6 +13,6 @@ if os.path.exists("Audio_Book.jpg"):
    st.logo("Audio_Book.jpg")
 
 st.sidebar.divider()
-st.sidebar.write("✨ Your Personal Audio Book Creator")
+st.sidebar.write("✨ Your Personal Audio Book Creator by Aman!")
 
 Run.run()
