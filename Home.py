@@ -72,52 +72,6 @@ if file is not None:
    elif file.type == "text/plain":
        st.success("Your TEXT file is uploaded")
 
-
-# def process_and_play(text_to_convert):
-#     try:
-#         if not text_to_convert.strip():
-#             st.error("No readable text found in the file!")
-#             return
-        
-#         # Show the text to the user
-#         st.text_area("Extracted Text Content", text_to_convert, height=300)
-
-#         with st.spinner(f"Converting to {choice} voice..."):
-#             # Generate Speech - Using the selected language and TLD
-#             speech = gTTS(text=text_to_convert[:5000], lang=selected_lang, slow=False, tld=selected_tld)
-            
-#             # Use a unique filename using timestamp to avoid 'File in use' errors
-#             audio_file = f"Audio_Voice_{int(time.time())}.mp3"
-#             speech.save(audio_file)
-            
-#             # Play Audio
-#             st.audio(audio_file)
-#             st.success("Conversion successful!")
-
-#             # Add Download Button
-#             with open(audio_file, "rb") as f:
-#                 st.download_button(
-#                     label="📥 Download Audio File",
-#                     data=f,
-#                     file_name="my_audiobook.mp3",
-#                     mime="audio/mpeg",
-#                     type="primary"
-#                 )
-#             # if st.download_button:
-#             #       files = glob.glob("Audio_Voice_*.mp3")
-#             #       # deleted_count = len(files)
-#             #       for f in files:
-#             #           os.remove(f)
-#             #       time.sleep(5)
-#             #       st.sidebar.success(f"🧹 Cleanup complete: {len(files)} old audio files deleted.")
-#             #       # st.sidebar.success(f"Deleted {len(files)} files!")
-#             #       # 4. Wait for 5 seconds
-
-#     except Exception as e:
-#         st.error(f"Error during audio generation: {e}")
-
-
-
 def process_and_play(text_to_convert):
     try:
         if not text_to_convert.strip():
@@ -179,20 +133,6 @@ if file:
             # 3. TXT Logic
             elif file.type == "text/plain":
                 extracted_text = file.getvalue().decode("utf-8")
-
-            
-            # if extracted_text.strip():
-            #     with st.spinner(f"Translating text to {choice}..."):
-            #         try:
-            #             # We limit to 4500 chars because translation APIs have limits
-            #             # 'source=auto' detects if you uploaded English, Hindi, etc.
-            #             translator = GoogleTranslator(source='auto', target=selected_lang)
-            #             extracted_text = translator.translate(extracted_text[:4500])
-            #             st.success("Translation successful!")
-            #         except Exception as e:
-            #             st.error(f"Translation Error: {e}")
-            
-
 
             if extracted_text.strip():
                with st.spinner(f"Translating text to {choice}..."):
