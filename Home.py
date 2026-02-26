@@ -101,7 +101,8 @@ def process_and_play(text_to_convert):
                 label="📥 Download Audiobook",
                 data=final_audio,
                 file_name="Audio_book.mp3",
-                mime="audio/mpeg")
+                mime="audio/mpeg",
+                type="primary")
     except Exception as e:
         if "429" in str(e):
             st.error("Rate Limit Hit (429): Google is blocking requests. Please wait 2 minutes before trying again.")
