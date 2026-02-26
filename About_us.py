@@ -24,9 +24,6 @@ Whether you are commuting, exercising, or just prefer listening over reading, we
 5. **Listen** directly in the app or **Download** the file.
 
 ---
-
-### ⚠️ Important Note:
-Currently, the app processes the first **5,000 characters** of your document to ensure fast conversion. Please ensure your PDF is not "scanned" (image-only), as the app requires actual text to read.
             """)
 
-st.info("Built with ❤️ using Streamlit and gTTS")
+st.info("Built with using Streamlit and gTTS")
