@@ -14,7 +14,7 @@ st.subheader("Convert your documents to speech in multiple languages!")
 st.sidebar.header("Voice Settings")
 
 lang_options = {
-   "Arabic": {"lang": "ar", "tld": "com"},
+    "Arabic": {"lang": "ar", "tld": "com"},
     "Bengali": {"lang": "bn", "tld": "com"},
     "Chinese (Mandarin)": {"lang": "zh-CN", "tld": "com"},
     "Czech": {"lang": "cs", "tld": "cz"},
